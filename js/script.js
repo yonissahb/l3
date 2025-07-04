@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load footer disclaimer dynamically
   document.getElementById('footer-msg').innerHTML = `
-    <p><span>Disclaimer:</span> All content is connected via AI and already available on the internet.<br>
-    We are just sharing the links.</p>
+    <p><span>Disclaimer:</span> We does not host any files on it's servers. All files or contents hosted on third party websites | We does not accept responsibility for contents hosted on third party websites. We just index those links which are already available in internet</p>
   `;
 
   // Replace shortcodes
