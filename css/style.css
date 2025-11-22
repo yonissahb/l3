@@ -1,92 +1,165 @@
 /* Base styles */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0f0f0f;
+  background: #0d0d0d;
   color: #f2f2f2;
 }
 
 /* Header styles */
 header {
-  background: linear-gradient(135deg, #222, #111);
-  padding: 20px 0;
+  background: linear-gradient(135deg, #1c1c1c, #0e0e0e);
+  padding: 22px 0;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-  margin: 0;
   color: #ffcc70;
-  font-size: 2rem;
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
   letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 204, 112, 0.7);
 }
 
 /* Download section */
 .download-links {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  max-width: 860px;
+  margin: 25px auto;
+  padding: 0 18px;
 }
 
+/* Link card */
 .link-container {
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s ease;
+  background: #151515;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  border: 1px solid #222;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  transition: 0.25s ease;
 }
 
 .link-container:hover {
-  transform: scale(1.01);
-  background: #222;
+  background: #1d1d1d;
+  transform: translateY(-3px);
+  border-color: #333;
 }
 
-h4 {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #ffcc70;
+/* Episode title */
+.link-container h4 {
+  font-size: clamp(1rem, 3.5vw, 1.25rem);
+  margin: 0 0 12px 0;
   text-align: center;
+  color: #ffcc70;
+  line-height: 1.4;
+  word-break: break-word;
+  text-shadow: 0 0 6px rgba(255, 200, 100, 0.4);
 }
 
-h2 {
-  font-size: 1rem;
-  font-weight: normal;
-  color: #90caf9;
-   text-align: center;
+/* Episode links string */
+.link-container h2 {
+  font-size: clamp(0.85rem, 3vw, 1rem);
+  margin: 0;
+  padding: 6px 0;
+  color: #8ac6ff;
+  text-align: center;
+  letter-spacing: 0.5px;
+  word-break: break-all;
 }
 
 /* Download buttons */
 .f-links {
   display: inline-block;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  background: linear-gradient(135deg, #007bff, #009dff);
   color: white;
-  padding: 8px 14px;
-  border-radius: 8px;
+  padding: 10px 16px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 5px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 10px 5px 0;
+  transition: 0.25s ease;
+  font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
 .f-links:hover {
   background: linear-gradient(135deg, #ff8a00, #e52e71);
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* Footer styles */
+/* Footer */
 footer {
-  margin-top: 50px;
-  background: linear-gradient(to right, #111, #1a1a1a);
-  padding: 30px 20px;
+  background: #111;
+  padding: 35px 20px;
   text-align: center;
-  color: #ccc;
-  font-size: 0.95rem;
-  border-top: 1px solid #333;
+  color: #bbb;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  border-top: 1px solid #222;
+  margin-top: 50px;
 }
 
 footer span {
   color: #76ff03;
-  font-weight: 500;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 600px) {
+  .link-container {
+    padding: 16px 16px;
+    margin-bottom: 14px;
+  }
+
+  .download-links {
+    padding: 0 12px;
+  }
+
+  h2, h4 {
+    text-align: center;
+  }
+}
+/* Movie Heading *//* Modern Premium Movie Heading */
+.movie-heading {
+    text-align: center;
+    margin: 30px 0 20px 0;
+    padding: 12px 0;
+    background-color: #1f1f1f; /* subtle dark background */
+    border-left: 5px solid #ffcc70; /* elegant accent line */
+    border-radius: 6px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-heading:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.movie-heading h3 {
+    margin: 0;
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Optional subtle underline animation */
+.movie-heading h3::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 2px;
+    background-color: #ffcc70;
+    margin: 6px auto 0;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.movie-heading:hover h3::after {
+    width: 60%;
 }
